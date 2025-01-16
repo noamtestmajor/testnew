@@ -10,7 +10,7 @@ annotation PBI_QueryOrder = ["Table1","Sheet1"]
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBIDesktopVersion = 2.119.986.0 (23.07)
+annotation PBIDesktopVersion = 2.119.986.1 (23.07)
 
 ref table Table1
 ref table DateTableTemplate_71fe02e5-fbef-4b51-b6ef-884c107bc435
