@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "PurgeData1 5"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "80a957b2-59e2-9b94-4251-87883f8d1d07"
+  }
+}

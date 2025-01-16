@@ -1,0 +1,41 @@
+table Sheet1
+	lineageTag: f391d879-af38-4b2f-bfad-441f3d50e93e
+
+	column City
+		dataType: string
+		lineageTag: c5266d6b-8ca6-44c2-aebb-de81ed7f6a99
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mixed
+		dataType: string
+		lineageTag: 68014b9b-b2a9-4adc-a17b-4657f3794381
+		summarizeBy: none
+		sourceColumn: Mixed
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Num of people'
+		dataType: int64
+		formatString: 0
+		lineageTag: 5b22d0ac-362a-4904-abae-f5fa1e19d708
+		summarizeBy: sum
+		sourceColumn: Num of people
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Sheet1 = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\work\TryDB.xlsx"), null, true),
+				    Sheet1_Sheet = Source{[Item="Sheet1",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"City", type text}, {"Mixed", type any}, {"Num of people", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+
