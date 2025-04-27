@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Eventhouse",
+    "displayName": "noam",
+    "description": "noam"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "f5f74065-7ebd-bc38-4026-4a03f9809830"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "queryset": {
+    "version": "1.0.0",
+    "tabs": [
+      {
+        "id": "8ff600f3-3421-4a92-ad7d-2cf683925757",
+        "title": "Tab",
+        "content": "//***********************************************************************************************************\n// Here are two articles to help you get started with KQL:\n// KQL reference guide - https://aka.ms/KQLguide\n// SQL - KQL conversions - https://aka.ms/sqlcheatsheet\n//***********************************************************************************************************\n\n// Use \"take\" to view a sample number of records in the table and check the data.\nYOUR_TABLE_HERE\n| take 100\n\n// See how many records are in the table.\nYOUR_TABLE_HERE\n| count\n\n// This query returns the number of ingestions per hour in the given table.\nYOUR_TABLE_HERE\n| summarize IngestionCount = count() by bin(ingestion_time(), 1h)\n\n",
+        "dataSourceId": "507329a2-68e7-4ec6-940d-1f017985464d"
+      }
+    ],
+    "dataSources": [
+      {
+        "type": "Fabric",
+        "id": "507329a2-68e7-4ec6-940d-1f017985464d",
+        "clusterUri": "",
+        "databaseItemId": "889d0f30-4e76-b325-4b3b-c36b9bd8cb82",
+        "databaseItemName": "noam"
+      }
+    ]
+  }
+}

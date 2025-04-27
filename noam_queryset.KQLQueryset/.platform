@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "KQLQueryset",
+    "displayName": "noam_queryset",
+    "description": "noam_queryset"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "3b42fe12-c38b-9ff5-404e-fcc53a573c1c"
+  }
+}
